@@ -25,14 +25,6 @@ void enQueue(int value)
         rear->next = newNode;
         rear = newNode;
     }
-    // if (front == rear)
-    //     cout << "Queue elemnts: " << rear->data << " ";
-    // // if(front!=rear)
-    // else
-    // {
-
-    //     cout << newNode->data << " ";
-    // }
 }
 void display()
 {
