@@ -68,6 +68,41 @@ int DeQueue()
     }
 }
 
+bool isEmpty()
+{
+    if (front == -1 && rear == -1)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+bool isFull()
+{
+    if (rear == Size - 1)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+void FrontValue()
+{
+    if (front == -1 && rear == -1)
+    {
+        cout << "Queue is empty" << endl;
+    }
+    else
+    {
+        cout << "Front value is: " << Queue[front] << endl;
+    }
+}
+
 int main()
 {
     EnQueue(10);
@@ -76,7 +111,13 @@ int main()
     EnQueue(40);
     EnQueue(50);
     display();
+    FrontValue();
     DeQueue();
+    FrontValue();
     DeQueue();
+    FrontValue();
     DeQueue();
+    FrontValue();
+    cout << isFull() << endl;
+    cout << isEmpty() << endl;
 }
